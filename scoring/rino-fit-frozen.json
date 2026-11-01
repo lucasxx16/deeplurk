@@ -1,0 +1,80 @@
+{
+  "status": "RINO_TRAIN_FIT_FROZEN",
+  "utc": "2026-10-28T11:14:54.168747+00:00",
+  "condition_id": "51f8fa5fa402cfa2d63bca4400d234e804c3261fceb3fba961ffc516bae3f53c",
+  "selected_train_n": 1104,
+  "official_train_n": 1104,
+  "exclusions_n": 0,
+  "group_count": 1104,
+  "fit": {
+    "selection": [
+      {
+        "method": "ordinal",
+        "penalty": 0.0,
+        "group_cv_mae": 0.8715347457513443
+      },
+      {
+        "method": "ordinal",
+        "penalty": 0.001,
+        "group_cv_mae": 0.8715325641506454
+      },
+      {
+        "method": "ordinal",
+        "penalty": 0.01,
+        "group_cv_mae": 0.871615208220344
+      },
+      {
+        "method": "ordinal",
+        "penalty": 0.1,
+        "group_cv_mae": 0.875850331001225
+      },
+      {
+        "method": "isotonic",
+        "penalty": null,
+        "group_cv_mae": 0.8741769237129998
+      }
+    ],
+    "selected": {
+      "method": "ordinal",
+      "penalty": 0.001,
+      "group_cv_mae": 0.8715325641506454
+    },
+    "model": {
+      "method": "ordinal_logistic",
+      "beta": 0.40409690720526026,
+      "thresholds": [
+        -2.929964991700874,
+        -1.0192161133998636,
+        0.3696957004120516,
+        2.0367321109450462
+      ],
+      "mean": 1.301085098930027,
+      "sd": 0.633401057056053,
+      "penalty": 0.001,
+      "training_objective": 1.4452852386211454,
+      "class_counts": [
+        60,
+        239,
+        349,
+        322,
+        134
+      ]
+    },
+    "train_mean_baseline": 3.2092391304347827,
+    "q_rule": "q=2*E[Y]-1; rubric rescaling only"
+  },
+  "baselines": {
+    "group_oof_train_mean_mae": 0.8968288342696883,
+    "frozen_old_q_rescaled_to_1_5_mae": 1.7763677536231886
+  },
+  "selection_bias_notice": "Selected grouped-CV result is for selection, not independent final-test performance. Final labels remain isolated.",
+  "baseline_limit": "Historical pool scaling constants applied to this newly frozen input/runtime condition; not proof of equivalence to historical635 raw scores.",
+  "software": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1"
+  },
+  "source_sha256": "059dbe2012e2f28f56fa3d5ca5142176ace43916090711c42c138d54e73a0e30",
+  "feasibility_truth_not_calibrated": true,
+  "final_holdout_evaluated": false,
+  "old_approximate_raw_scores_reused": 0
+}
