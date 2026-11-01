@@ -1,0 +1,11 @@
+# Models and evidence boundaries
+
+The scoring experiment used SRM general (Qwen3-14B) to produce Novelty, Feasibility and Probability axes from one model. The raw Probability score is not a calibrated probability of success. The local run used on-load NF4 quantization rather than a pre-quantized package; its GPU/CPU setup is not evidence that the same procedure runs in a CPU-only 32 GB sandbox. A frozen RINo mapping applied to Novelty; the historical Arena preference mapping has a different use and was not a universal absolute calibration. Selected scoring code and the frozen fit are included; weights, the upstream prompt template, and the original batch guards are not. The new portable wrapper requires independent numerical verification and no scoring service endpoint is implemented here.
+
+An experiment encoded 885 candidate inputs with BGE small on CPU; its field template was candidate context and hypothesis, not community profiles. Semantic routing remains a design and should not be presented as an evaluated deployed system.
+
+The corresponding SRM batch reported 885 scored, zero excluded, with a separate completeness check of unique IDs, input hashes, finite outputs, novelty distribution arithmetic and full hypothesis retention. That check is not scientific ground truth or a new numerical-equivalence experiment.
+
+SciencePal was used through browser interaction on two cases. In P-0564 it suggested controls that were run locally; one suggested expected result failed empirical checking. P-0015 proposed further controls, subsequently run locally; it did not serve as a negative control. The full sandbox-to-local automated workflow was not established. The original chain contains erroneous manually entered timestamps; a later provenance reconstruction uses local filesystem and platform evidence. These are not independently tamper-proof timestamps and should not be represented as such. No raw chats or logs are included here.
+
+Earlier work recorded 635 candidates across differently generated and transformed sources. Differences in score cannot be attributed to source because models, collection periods and information budgets differ. Local case findings have narrow version and input scope; do not imply novel discovery, general model accuracy or production readiness.
