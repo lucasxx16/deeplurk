@@ -1,0 +1,64 @@
+{
+  "posthoc": true,
+  "input_sha256": "847d6ebd9a1ec9a768f2be7e40ca42cbfe75ebeb6d76a4c24167041699dc28b5",
+  "prior_neighbors_sha256": "7008610b28fd1a6b6c81088d442601e9231088a54e0faa2fe5a1d838a07de253",
+  "prior_genes_sha256": "3218286a8d155dcf41c14a982c8be5d204a77fdf2b7ccdaa41914f126e71614f",
+  "script_sha256": "dd2fbbb4f01528d704ebdbf588d8e9eaa91b353acadc90d7e60212a38d577f2d",
+  "versions": {
+    "python": "3.11.16 (main, Aug 25 2026, 13:59:19) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.5.2",
+    "scanpy": "1.11.1",
+    "anndata": "0.10.9",
+    "umap": "0.5.7"
+  },
+  "n_cells": 128,
+  "n_genes": 1000,
+  "paths": {
+    "builtin": {
+      "status": "ok",
+      "warnings": [],
+      "distance_nnz": 1792,
+      "connectivity_nnz": 3058,
+      "components": 1,
+      "spectral_warnings": []
+    },
+    "wrong_similarity": {
+      "status": "ok",
+      "warnings": [],
+      "distance_nnz": 2048,
+      "connectivity_nnz": 3266,
+      "components": 1,
+      "spectral_warnings": []
+    },
+    "correct_distance": {
+      "status": "ok",
+      "warnings": [],
+      "distance_nnz": 2048,
+      "connectivity_nnz": 3058,
+      "components": 1,
+      "spectral_warnings": []
+    }
+  },
+  "comparisons": {
+    "wrong_similarity": {
+      "distance_neighbor_jaccard_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spectral_cluster_ari": 0.07816489398486881
+    },
+    "correct_distance": {
+      "distance_neighbor_jaccard_min_median_max": [
+        0.9333333333333333,
+        0.9333333333333333,
+        0.9333333333333333
+      ],
+      "spectral_cluster_ari": 0.6446948366658493
+    }
+  },
+  "elapsed_seconds": 1.7820000001229346
+}

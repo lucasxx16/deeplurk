@@ -1,0 +1,5 @@
+# P-0370 Scanpy distance-contract follow-up
+
+This is the actual post-hoc analysis script and a local aggregate result, not the original issue reproduction. The script expects the PBMC3k archive and two prior selection CSVs in its original relative layout; these inputs are excluded and must be obtained and checked separately. It writes outputs and refuses to overwrite graphs; run only on a new copy in an isolated directory. The result's script hash refers to the original file. The analysis used 128 cells and 1000 genes, Scanpy 1.11.1, and a spectral clustering proxy rather than the original PBMC68k/Leiden setting.
+
+For this specific setup the wrong similarity callable had median neighbor Jaccard 0.0 against built-in cosine, and the correct-distance callable had 0.9333. These are contract sensitivity observations, not evidence of a confirmed Scanpy defect, a reproduction of the original issue, or a general measure of biological impact. Dataset redistribution rights and exact selection files were not established, so they are excluded.
