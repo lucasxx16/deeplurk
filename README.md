@@ -25,4 +25,4 @@ python routing/test_validation.py
 
 The tests validate record structure and selected consistency rules; they do not establish that a site is accessible, authorized, truthful or scientifically valuable. All sample records are fictional.
 
-Embedding requires separate model weights and optional dependencies; see `embedding/README.md`. No credentials, weights, raw chats, user data, browser profiles, original experiment logs or git history are shipped. Do not treat score model outputs as success probabilities or evidence of novelty.
+Embedding requires separate model weights and optional dependencies; see `embedding/README.md`. No credentials, weights, raw chats, user data, browser profiles, original experiment logs or git history are shipped. The Probability axis estimates the scientist rating dimension for a hypothesis's likelihood of being true; the model's raw reward is not a 0–1 probability, a success rate, or direct expert assessment of these candidates. Model scores alone do not establish novelty.
